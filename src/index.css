@@ -1,0 +1,48 @@
+@config "../tailwind.config.js";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap');
+@import 'tailwindcss';
+
+:root {
+  color: #0a192f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: 'Inter', sans-serif;
+  color: #0a192f;
+  line-height: 1.625;
+  background: #ffffff;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+}
+
+input[type='range'] {
+  accent-color: #10b981;
+}
