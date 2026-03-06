@@ -55,7 +55,9 @@ function Breadcrumbs() {
           </li>
 
           {segments.map((segment, index) => {
-            const to = `/${segments.slice(0, index + 1).join('/')}`
+            const to = segment === 'best-solar-provider-in'
+              ? '/locations'
+              : `/${segments.slice(0, index + 1).join('/')}`
             const isLast = index === segments.length - 1
             const label = formatSegment(segment)
 

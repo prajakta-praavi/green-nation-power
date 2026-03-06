@@ -7,7 +7,6 @@ import {
   getServiceLocationBySlug,
   SERVICE_LOCATIONS,
 } from '../data/serviceLocations'
-import gnpLogo from '../../assets/gnp_logo.png'
 
 function LocationLandingPage({ onOpenCalculator }) {
   const { citySlug } = useParams()
@@ -72,7 +71,6 @@ function LocationLandingPage({ onOpenCalculator }) {
 
       <div className="mx-auto w-full max-w-7xl space-y-10 px-4 sm:px-6 lg:px-8">
         <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-          <img src={gnpLogo} alt="Green Nation Power" className="mb-4 h-14 w-auto" />
           <p className="inline-flex items-center gap-2 text-sm font-semibold text-brand-green">
             <MapPin className="h-4 w-4" />
             Pune District Service Hub - {cityName}

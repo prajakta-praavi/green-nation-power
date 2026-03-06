@@ -31,7 +31,7 @@ function ResultsDisplay({ activeTab, residential, commercial, rural, reportStatu
         <>
           {!residential.canShowFinalResult && (
             <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
-              Complete load-shedding response and 6-digit pin code to unlock final estimate.
+              Complete load-shedding response and address to unlock final estimate.
             </div>
           )}
 
@@ -51,7 +51,7 @@ function ResultsDisplay({ activeTab, residential, commercial, rural, reportStatu
             />
             <DownloadButtonGate
               onClick={onDownloadClick}
-              disabled={isGenerating || !residential.canShowFinalResult}
+              disabled={isGenerating}
             />
             <a
               href={residential.whatsappLink}

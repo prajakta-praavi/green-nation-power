@@ -1,5 +1,4 @@
 import { motion as Motion } from 'framer-motion'
-import gnpLogo from '../../assets/gnp_logo.png'
 
 const projects = [
   {
@@ -28,14 +27,11 @@ function ProjectsPage() {
       className="bg-white py-12"
     >
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-8 flex items-center gap-4">
-          <img src={gnpLogo} alt="Green Nation Power" className="h-12 w-auto" />
-          <div>
-            <h1 className="font-montserrat text-3xl font-extrabold text-brand-navy">
-              Signature Projects
-            </h1>
-            <p className="text-base text-slate-600">A sample of GNP deployment profiles across Pune district.</p>
-          </div>
+        <div className="mb-8">
+          <h1 className="font-montserrat text-3xl font-extrabold text-brand-navy">
+            Signature Projects
+          </h1>
+          <p className="text-base text-slate-600">A sample of GNP deployment profiles across Pune district.</p>
         </div>
 
         <div className="grid gap-4 md:grid-cols-3">

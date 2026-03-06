@@ -10,8 +10,8 @@ function ResidentialForm({
   onHeavyDutyChange,
   includeMsebPaperwork,
   onMsebPaperworkChange,
-  pinCode,
-  onPinCodeChange,
+  address,
+  onAddressChange,
   isFastTrackZone,
 }) {
   return (
@@ -108,17 +108,13 @@ function ResidentialForm({
 
       <div>
         <label className="mb-2 block text-base font-medium text-slate-700">
-          Pin Code
+          Address
         </label>
         <input
           type="text"
-          value={pinCode}
-          inputMode="numeric"
-          maxLength={6}
-          onChange={(event) =>
-            onPinCodeChange(event.target.value.replace(/\D/g, '').slice(0, 6))
-          }
-          placeholder="6-digit pin code"
+          value={address}
+          onChange={(event) => onAddressChange(event.target.value)}
+          placeholder="Enter your full address"
           className="h-12 w-full rounded-md border border-slate-200 bg-transparent px-3 text-base"
         />
       </div>

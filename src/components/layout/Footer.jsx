@@ -4,6 +4,8 @@ import { CONTACT_EMAIL, CONTACT_PHONE } from '../../constants'
 import { getLocationPagePath, SERVICE_LOCATIONS } from '../../data/serviceLocations'
 
 function Footer() {
+  const currentYear = new Date().getFullYear()
+
   return (
     <footer className="bg-brand-navy pb-28 pt-12 text-slate-200 md:pb-12">
       <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
@@ -16,6 +18,11 @@ function Footer() {
             Phone: {CONTACT_PHONE}
             <br />
             Email: {CONTACT_EMAIL}
+          </p>
+          <p className="text-sm leading-relaxed text-slate-300">
+            Green Nation Power is a trusted solar company in Pune offering residential rooftop solar,
+            commercial solar plants, EPC execution, subsidy support, net metering, and end-to-end solar
+            installation services across Maharashtra.
           </p>
         </div>
 
@@ -89,6 +96,9 @@ function Footer() {
             ))}
           </ul>
         </div>
+      </div>
+      <div className="mx-auto mt-10 w-full max-w-7xl border-t border-slate-700 px-4 pt-6 text-center text-sm text-slate-400 sm:px-6 lg:px-8">
+        © {currentYear} Green Nation Power. All rights reserved.
       </div>
     </footer>
   )

@@ -1,4 +1,5 @@
-import { Outlet } from 'react-router-dom'
+import { useEffect } from 'react'
+import { Outlet, useLocation } from 'react-router-dom'
 import BackToTopButton from './BackToTopButton'
 import Breadcrumbs from './Breadcrumbs'
 import Footer from './Footer'
@@ -7,6 +8,12 @@ import Navbar from './Navbar'
 import WhatsAppFloatingAction from './WhatsAppFloatingAction'
 
 function AppLayout({ onOpenCalculator }) {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+  }, [pathname])
+
   return (
     <div className="min-h-screen bg-white text-brand-navy">
       <Navbar onOpenCalculator={onOpenCalculator} />

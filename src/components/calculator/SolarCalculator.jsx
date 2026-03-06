@@ -10,7 +10,6 @@ import {
   RESIDENTIAL_SUBSIDY_CAP,
   RURAL_KW_PER_ACRE,
   RURAL_SITE_DEVELOPMENT_PER_ACRE,
-  TARGET_FAST_TRACK_PINCODES,
   TREES_PER_TON,
   WHATSAPP_NUMBER,
 } from '../../constants'
@@ -49,7 +48,7 @@ function SolarCalculator({ initialTab = 'residential', lockedTab = null, classNa
   const [hasLoadShedding, setHasLoadShedding] = useState(null)
   const [needsHeavyDutyStructure, setNeedsHeavyDutyStructure] = useState(false)
   const [includeMsebPaperwork, setIncludeMsebPaperwork] = useState(true)
-  const [pinCode, setPinCode] = useState('')
+  const [address, setAddress] = useState('')
 
   const [isLeadModalOpen, setIsLeadModalOpen] = useState(false)
   const [reportStatus, setReportStatus] = useState('idle')
@@ -97,8 +96,9 @@ function SolarCalculator({ initialTab = 'residential', lockedTab = null, classNa
 
     const co2Tons = annualGeneration * CO2_PER_UNIT
     const trees = co2Tons * TREES_PER_TON
-    const isFastTrackZone = TARGET_FAST_TRACK_PINCODES.includes(pinCode)
-    const canShowFinalResult = hasLoadShedding !== null && pinCode.length === 6
+    const isFastTrackZone = false
+    const canShowFinalResult =
+      hasLoadShedding !== null && address.trim().length > 0
 
     const message = `Hi GNP, I need consultation for ${formatNumber(
       recommendedKw,
@@ -121,10 +121,10 @@ function SolarCalculator({ initialTab = 'residential', lockedTab = null, classNa
       whatsappLink: toWhatsAppHref(WHATSAPP_NUMBER, message),
     }
   }, [
+    address,
     hasLoadShedding,
     monthlyBill,
     needsHeavyDutyStructure,
-    pinCode,
   ])
 
   const commercial = useMemo(() => {
@@ -395,8 +395,8 @@ function SolarCalculator({ initialTab = 'residential', lockedTab = null, classNa
               onHeavyDutyChange={setNeedsHeavyDutyStructure}
               includeMsebPaperwork={includeMsebPaperwork}
               onMsebPaperworkChange={setIncludeMsebPaperwork}
-              pinCode={pinCode}
-              onPinCodeChange={setPinCode}
+              address={address}
+              onAddressChange={setAddress}
               isFastTrackZone={residential.isFastTrackZone}
             />
           )}

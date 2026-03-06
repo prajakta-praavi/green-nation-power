@@ -19,6 +19,19 @@ export const RURAL_KW_PER_ACRE = 400
 export const RURAL_SITE_DEVELOPMENT_PER_ACRE = 150000
 
 export const TARGET_FAST_TRACK_PINCODES = ['412202', '412201', '412216', '412220']
+export const PINCODE_LOCATION_MAP = {
+  '412202': 'Uruli Kanchan, Pune',
+  '412201': 'Loni Kalbhor, Pune',
+  '412216': 'Saswad, Pune',
+  '412220': 'Theur, Pune',
+  '413106': 'Indapur, Pune',
+  '413130': 'Baramati, Pune',
+  '412203': 'Daund, Pune',
+  '412214': 'Yavat, Pune',
+  '412211': 'Kedgaon, Pune',
+  '413105': 'Bhigwan, Pune',
+  '412303': 'Jejuri, Pune',
+}
 
 export const WHATSAPP_CONSULTATION_MESSAGE =
   'Hi GNP, I am looking for a solar consultation.'

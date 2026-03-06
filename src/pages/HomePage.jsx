@@ -26,7 +26,6 @@ import {
 } from '../constants'
 import { getLocationPagePath, SERVICE_LOCATIONS } from '../data/serviceLocations'
 import { formatCurrency, formatNumber } from '../solar/helpers'
-import gnpLogo from '../../assets/gnp_logo.png'
 
 const categoryCards = [
   {
@@ -499,14 +498,11 @@ function HomePage({ onOpenCalculator }) {
         whileInView="show"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeUp}
-        className="relative overflow-hidden bg-gradient-to-b from-slate-100 via-white to-white py-16"
+        className="relative overflow-hidden bg-white py-16"
       >
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-36 bg-[radial-gradient(circle_at_top,_rgba(16,185,129,0.22),transparent_65%)]" />
-        <div className="pointer-events-none absolute -left-24 top-1/2 h-56 w-56 -translate-y-1/2 rounded-full bg-emerald-100/60 blur-3xl" />
         <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:px-8">
           <div className="relative">
-            <img src={gnpLogo} alt="Green Nation Power" className="mb-5 h-16 w-auto" />
-            <p className="mb-3 inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-emerald-700">
+            <p className="mb-3 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700">
               <MapPin className="h-3.5 w-3.5" />
               End-to-End Solar Partner
             </p>
@@ -519,7 +515,7 @@ function HomePage({ onOpenCalculator }) {
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Button onClick={() => onOpenCalculator('residential')}>Calculate Savings</Button>
-              <Button to="/projects" variant="outline">
+              <Button to="/projects" variant="outline" className="border-brand-navy text-brand-navy hover:bg-slate-100">
                 View Projects
               </Button>
             </div>
@@ -591,25 +587,13 @@ function HomePage({ onOpenCalculator }) {
                   })}
                 </Motion.div>
 
-                <Button className="mt-7">Discover More</Button>
+                <Button to="/about" className="mt-7">Know More</Button>
               </article>
 
               <div className="relative mx-auto w-full max-w-xl">
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="relative h-72 overflow-hidden rounded-[42px] bg-gradient-to-b from-sky-300 via-emerald-200 to-sky-500 md:h-96">
-                    <img
-                      src={gnpLogo}
-                      alt="Solar energy visual"
-                      className="h-full w-full object-cover opacity-35"
-                    />
-                  </div>
-                  <div className="mt-10 h-72 overflow-hidden rounded-[42px] bg-gradient-to-b from-slate-100 via-slate-200 to-slate-300 md:h-96">
-                    <img
-                      src={gnpLogo}
-                      alt="Solar installation visual"
-                      className="h-full w-full object-contain p-10 opacity-50"
-                    />
-                  </div>
+                  <div className="relative h-72 overflow-hidden rounded-[42px] bg-gradient-to-b from-sky-300 via-emerald-200 to-sky-500 md:h-96" />
+                  <div className="mt-10 h-72 overflow-hidden rounded-[42px] bg-gradient-to-b from-slate-100 via-slate-200 to-slate-300 md:h-96" />
                 </div>
 
                 <div className="absolute left-1/2 top-1/2 flex h-36 w-36 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-8 border-bg-light bg-brand-green text-center text-white shadow-lg">
@@ -659,7 +643,7 @@ function HomePage({ onOpenCalculator }) {
             energy applications.
           </p>
 
-          <Motion.div variants={staggerIn} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="mt-8 grid gap-4 md:grid-cols-2">
+          <Motion.div variants={staggerIn} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {solutionOfferings.map((item) => {
               const Icon = item.icon
 
@@ -707,7 +691,7 @@ function HomePage({ onOpenCalculator }) {
         className="bg-white py-14"
       >
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="font-montserrat text-3xl font-bold text-brand-navy">Why GNP</h2>
+          <h2 className="font-montserrat text-3xl font-bold text-brand-navy">Why Green Nations Power</h2>
           <Motion.div variants={staggerIn} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="mt-8 grid gap-4 md:grid-cols-3">
             {whyGnp.map((item) => {
               const Icon = item.icon
@@ -727,10 +711,10 @@ function HomePage({ onOpenCalculator }) {
         </div>
       </Motion.section>
 
-      <section className="bg-brand-navy py-14 text-white">
+      <section className="bg-bg-light py-14 text-brand-navy">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-montserrat text-3xl font-bold">Best Solar Provider Pages by City</h2>
-          <p className="mt-2 max-w-3xl text-slate-300">
+          <p className="mt-2 max-w-3xl text-slate-600">
             Browse our city-focused pages to explore local service availability and project execution.
           </p>
 
@@ -739,7 +723,7 @@ function HomePage({ onOpenCalculator }) {
               <Link
                 key={city.slug}
                 to={getLocationPagePath(city.slug)}
-                className="rounded-lg border border-slate-700 bg-slate-900/40 px-4 py-3 text-base font-semibold text-slate-100 transition hover:border-brand-green hover:text-brand-green"
+                className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-base font-semibold text-brand-navy transition hover:border-brand-green hover:text-brand-green"
               >
                 Best Solar Provider in {city.name}
               </Link>
@@ -748,7 +732,7 @@ function HomePage({ onOpenCalculator }) {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <Button onClick={() => onOpenCalculator('commercial')}>Request Site Survey</Button>
-            <Button to="/locations" variant="outline" className="border-white text-white hover:bg-white/10">
+            <Button to="/locations" variant="outline" className="border-brand-navy bg-transparent text-brand-navy hover:bg-slate-100">
               Explore Service Areas
             </Button>
           </div>

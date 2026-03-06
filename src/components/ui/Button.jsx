@@ -11,7 +11,7 @@ function Button({
   ...props
 }) {
   const baseClasses =
-    'h-12 rounded-md px-4 text-base font-semibold transition duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60'
+    'inline-flex h-12 items-center justify-center rounded-md px-4 text-base font-semibold transition duration-200 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60'
 
   const variantClasses =
     variant === 'outline'
