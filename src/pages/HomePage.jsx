@@ -286,7 +286,7 @@ function HomePage({ onOpenCalculator }) {
         <div className="relative mx-auto grid h-full w-full max-w-7xl items-center gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_1fr] lg:px-8">
           <div className="max-w-3xl text-white">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-200">
-              Green Nation Power
+              Green Nations Power
             </p>
             <h2 className="mt-3 font-montserrat text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl">
               {heroBanners[activeBannerIndex].title}
@@ -363,7 +363,7 @@ function HomePage({ onOpenCalculator }) {
         <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1.2fr_1fr] lg:px-8">
           <div className="relative">
             <p className="inline-flex items-center rounded-xl bg-brand-green px-4 py-2 text-lg font-semibold text-brand-navy">
-              Green Nation Power
+              Green Nations Power
             </p>
             <h2 className="mt-5 font-montserrat text-4xl font-extrabold leading-tight sm:text-5xl">
               Solar <span className="text-brand-green">RoofTop</span> Calculator
@@ -562,7 +562,7 @@ function HomePage({ onOpenCalculator }) {
                   Your Trusted Partner For <span className="text-brand-green">Rooftop Solar</span> Solutions
                 </h2>
                 <p className="mt-4 max-w-2xl text-lg text-slate-600">
-                  Green Nation Power delivers end-to-end solar services from design and installation to
+                  Green Nations Power delivers end-to-end solar services from design and installation to
                   support, using quality components and practical engineering standards.
                 </p>
 

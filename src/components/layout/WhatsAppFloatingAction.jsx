@@ -13,7 +13,7 @@ function WhatsAppFloatingAction() {
       target="_blank"
       rel="noreferrer"
       className="fixed bottom-[calc(9.75rem+env(safe-area-inset-bottom))] right-4 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-lg transition hover:scale-105 md:bottom-28 md:right-8"
-      aria-label="WhatsApp Green Nation Power"
+      aria-label="WhatsApp Green Nations Power"
     >
       <svg viewBox="0 0 32 32" className="h-7 w-7 fill-white" aria-hidden>
         <path d="M19.11 17.21c-.26-.13-1.52-.75-1.76-.84-.24-.09-.41-.13-.58.13s-.67.84-.82 1.01c-.15.17-.3.2-.56.07-.26-.13-1.09-.4-2.08-1.27-.77-.68-1.3-1.52-1.45-1.78-.15-.26-.02-.4.11-.53.12-.12.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.07-.13-.58-1.39-.8-1.91-.21-.5-.42-.44-.58-.45h-.5c-.17 0-.45.07-.69.32-.24.26-.91.89-.91 2.17s.93 2.52 1.06 2.69c.13.17 1.83 2.79 4.43 3.91.62.27 1.11.43 1.49.55.63.2 1.21.17 1.66.1.51-.08 1.52-.62 1.74-1.22.21-.6.21-1.11.15-1.22-.05-.1-.22-.16-.48-.29Z" />

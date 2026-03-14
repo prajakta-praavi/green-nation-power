@@ -16,7 +16,7 @@ function LocationLandingPage({ onOpenCalculator }) {
     return (
       <div className="bg-bg-light py-12">
         <SeoMeta
-          title="Solar Service Area Not Found | Green Nation Power"
+          title="Solar Service Area Not Found | Green Nations Power"
           description="The requested service area page was not found. Explore all solar service areas in Pune district."
         />
 
@@ -40,8 +40,8 @@ function LocationLandingPage({ onOpenCalculator }) {
     )
   }
 
-  const seoTitle = `Best Solar Provider in ${city.name} | Green Nation Power`
-  const seoDescription = `Looking for the best solar provider in ${city.name}? Green Nation Power delivers residential, commercial, and EPC solar projects with full Mahavitaran paperwork support.`
+  const seoTitle = `Best Solar Provider in ${city.name} | Green Nations Power`
+  const seoDescription = `Looking for the best solar provider in ${city.name}? Green Nations Power delivers residential, commercial, and EPC solar projects with full Mahavitaran paperwork support.`
   const cityName = city.name
 
   const cityBenefits = [

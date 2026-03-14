@@ -423,7 +423,7 @@ function SolarReportDocument({ report }) {
 
         <View style={styles.footer} fixed>
           <Text style={styles.footerText}>
-            Green Nation Power | Uruli Kanchan | Contact: {contactPhone} |
+            Green Nations Power | Uruli Kanchan | Contact: {contactPhone} |
             {'  '}
             Generated specifically for {clientName}
           </Text>
